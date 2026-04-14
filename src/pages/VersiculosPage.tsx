@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useQuery, useMutation } from '@tanstack/react-query';
-import api from '../utils/api';
 
 interface Versiculo {
   id: string;
@@ -27,7 +26,7 @@ export default function VersiculosPage() {
   });
 
   const { mutate: criar, isPending } = useMutation({
-    mutationFn: async (data) => {
+    mutationFn: async (data: typeof novo) => {
       // TODO: Chamar endpoint real
       return data;
     },
