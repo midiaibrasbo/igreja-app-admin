@@ -1,10 +1,10 @@
 # Painel Administrativo - Igreja Batista da Redenção
 
 ## Fase 1: Backend e Banco de Dados
-- [ ] Configurar PostgreSQL
-- [ ] Criar schema do banco de dados (usuários, membros, eventos, doações)
-- [ ] Configurar variáveis de ambiente
-- [ ] Criar API endpoints básicos
+- [x] Configurar PostgreSQL (Supabase)
+- [x] Criar schema do banco de dados (usuários, membros, eventos, doações)
+- [x] Configurar variáveis de ambiente
+- [x] Criar API endpoints básicos
 
 ## Fase 2: Autenticação
 - [ ] Implementar autenticação com Google OAuth
