@@ -3,6 +3,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Layout from './components/Layout';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
+import MembersPage from './pages/MembersPage';
+import EventsPage from './pages/EventsPage';
+import DonationsPage from './pages/DonationsPage';
 import VersiculosPage from './pages/VersiculosPage';
 import CultosPage from './pages/CultosPage';
 import MensagensPage from './pages/MensagensPage';
@@ -29,6 +32,10 @@ function App() {
           {isAuthenticated ? (
             <Route element={<Layout />}>
               <Route path="/" element={<DashboardPage />} />
+              <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/members" element={<MembersPage />} />
+              <Route path="/events" element={<EventsPage />} />
+              <Route path="/donations" element={<DonationsPage />} />
               <Route path="/versiculos" element={<VersiculosPage />} />
               <Route path="/cultos" element={<CultosPage />} />
               <Route path="/mensagens" element={<MensagensPage />} />
