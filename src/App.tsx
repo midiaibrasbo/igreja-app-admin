@@ -2,10 +2,13 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Layout from './components/Layout';
 import LoginPage from './pages/LoginPage';
+import SplashScreen from './pages/SplashScreen';
 import DashboardPage from './pages/DashboardPage';
 import MembersPage from './pages/MembersPage';
 import EventsPage from './pages/EventsPage';
 import DonationsPage from './pages/DonationsPage';
+import FacebookLivePage from './pages/FacebookLivePage';
+import BirthdayPage from './pages/BirthdayPage';
 import VersiculosPage from './pages/VersiculosPage';
 import CultosPage from './pages/CultosPage';
 import MensagensPage from './pages/MensagensPage';
@@ -27,6 +30,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Router>
         <Routes>
+          <Route path="/splash" element={<SplashScreen />} />
           <Route path="/login" element={<LoginPage />} />
           
           {isAuthenticated ? (
@@ -36,6 +40,8 @@ function App() {
               <Route path="/members" element={<MembersPage />} />
               <Route path="/events" element={<EventsPage />} />
               <Route path="/donations" element={<DonationsPage />} />
+              <Route path="/facebook-live" element={<FacebookLivePage />} />
+              <Route path="/birthdays" element={<BirthdayPage />} />
               <Route path="/versiculos" element={<VersiculosPage />} />
               <Route path="/cultos" element={<CultosPage />} />
               <Route path="/mensagens" element={<MensagensPage />} />
